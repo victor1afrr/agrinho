@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agro Sustentável: O Futuro da Terra</title>
+    <style>
+        /* Configurações Gerais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            color: #ffffff;
+            /* Fundo verde sobreposto a uma imagem do agro usando gradiente semi-transparente */
+            background: linear-gradient(rgba(34, 76, 56, 0.88), rgba(16, 44, 30, 0.92)), 
+                        url('https://images.unsplash.com/photo-1530595467537-0b5996c41f2d?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            line-height: 1.6;
+        }
+
+        header {
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            color: #76ff03;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #e0e0e0;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Container Principal */
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Seção de Destaques/Cards */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 25px;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.1);
+            border-color: #76ff03;
+        }
+
+        .card h3 {
+            color: #76ff03;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card p {
+            color: #cfd8dc;
+            font-size: 0.95rem;
+        }
+
+        /* Seção de Informações Concretas */
+        .info-section {
+            background: rgba(16, 44, 30, 0.7);
+            border-left: 5px solid #76ff03;
+            padding: 30px;
+            border-radius: 4px;
+            margin-bottom: 50px;
+        }
+
+        .info-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        .info-section ul {
+            list-style-type: none;
+        }
+
+        .info-section li {
+            margin-bottom: 12px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .info-section li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #76ff03;
+            font-weight: bold;
+        }
+
+        /* Galeria de Imagens Contextuais */
+        .gallery {
+            margin-bottom: 50px;
+        }
+
+        .gallery h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2rem;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            height: 200px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-item .caption {
+            position: absolute;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.75);
+            width: 100%;
+            padding: 10px;
+            font-size: 0.85rem;
+            text-align: center;
+        }
+
+        /* Rodapé */
+        footer {
+            text-align: center;
+            padding: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: #b0bec5;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            header h1 { font-size: 2rem; }
+            .container { margin: 20px auto; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Agro Sustentável</h1>
+        <p>Inovação, tecnologia e respeito ao meio ambiente garantindo a segurança alimentar do amanhã.</p>
+    </header>
+
+    <div class="container">
+        
+        <div class="grid">
+            <div class="card">
+                <h3>Agricultura de Precisão</h3>
+                <p>Uso de sensores, drones e inteligência artificial para aplicar água, fertilizantes e defensivos apenas onde é estritamente necessário, reduzindo o desperdício em até 40%.</p>
+            </div>
+            <div class="card">
+                <h3>Crédito de Carbono</h3>
+                <p>O solo bem manejado sequestra carbono da atmosfera. Práticas de plantio direto e ILPF transformam fazendas em aliadas contra o aquecimento global.</p>
+            </div>
+            <div class="card">
+                <h3>Energia Limpa</h3>
+                <p>Crescimento do uso de biomassa, biogás derivado de resíduos animais e painéis solares para tornar as propriedades rurais autossuficientes e matrizes energéticas limpas.</p>
+            </div>
+        </div>
+
+        <section class="info-section">
+            <h2>Dados do Setor e Compromissos Reais</h2>
+            <p style="margin-bottom: 15px; color: #b0bec5;">O futuro do agronegócio não é apenas produzir mais, mas produzir melhor. Veja os pilares dessa transformação:</p>
+            <ul>
+                <li><strong>Preservação de Biomas:</strong> O Novo Código Florestal Brasileiro exige que propriedades mantenham de 20% a 80% (na Amazônia Legal) de sua área com vegetação nativa preservada.</li>
+                <li><strong>Redução de Desperdício de Água:</strong> Sistemas de irrigação inteligente por gotejamento economizam até 50% de água se comparados aos métodos tradicionais por inundação.</li>
+                <li><strong>Bioinsumos:</strong> O uso de defensores biológicos e bactérias fixadoras de nitrogênio cresce a taxas de dois dígitos ao ano, substituindo gradativamente os produtos químicos.</li>
+                <li><strong>Integração Lavoura-Pecuária-Floresta (ILPF):</strong> Estratégia que otimiza o uso da terra, melhora o bem-estar animal na sombra das árvores e recupera pastagens degradadas.</li>
+            </ul>
+        </section>
+
+        <section class="gallery">
+            <h2>Tecnologia no Campo</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad451?auto=format&fit=crop&w=500&q=80" alt="Plantação irrigada moderna">
+                    <div class="caption">Gestão Hídrica Inteligente</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1592417817098-8f3d6eb18865?auto=format&fit=crop&w=500&q=80" alt="Drone sobrevoando plantação">
+                    <div class="caption">Monitoramento por Drones</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=500&q=80" alt="Energia solar em fazenda">
+                    <div class="caption">Energia Renovável Rural</div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Agro Sustentável. Produzindo com inteligência, preservando para as próximas gerações.</p>
+    </footer>
+
+</body>
+</html>
