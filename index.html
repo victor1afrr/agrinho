@@ -167,7 +167,326 @@
         }
 
         /* Destaques de Investimento */
+        .stats-banner {<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agronegócio & Sustentabilidade</title>
+    <style>
+        /* Configurações Gerais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            color: #ffffff;
+            line-height: 1.6;
+            background-color: #0d381e; /* Fundo verde de segurança */
+        }
+
+        /* Fundo customizado: Imagem do Agro com sobreposição verde transparente */
+        .background-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            /* Substitua a URL abaixo por qualquer imagem de agro que desejar */
+            background-image: linear-gradient(rgba(18, 71, 38, 0.85), rgba(13, 56, 30, 0.92)), url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: rgba(10, 43, 23, 0.8);
+            padding: 20px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #27ae60;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(5px);
+        }
+
+        header h1 {
+            font-size: 24px;
+            color: #2ecc71;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #2ecc71;
+        }
+
+        /* Container Principal */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Seção Hero */
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 40px;
+        }
+
+        .hero h2 {
+            font-size: 42px;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 800px;
+            margin: 0 auto;
+            color: #eaeded;
+        }
+
+        /* Grade de Informações */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background: rgba(16, 61, 33, 0.75);
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 5px solid #2ecc71;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: #2ecc71;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        /* Imagens Ilustrativas nas Seções */
+        .section-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        /* Tabela de Dados e Recursos */
+        .data-table-container {
+            background: rgba(10, 43, 23, 0.9);
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            overflow-x: auto;
+        }
+
+        .data-table-container h3 {
+            color: #2ecc71;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        th {
+            background-color: #1b5e34;
+            color: #2ecc71;
+        }
+
+        tr:hover {
+            background-color: rgba(255,255,255,0.05);
+        }
+
+        /* Destaques de Investimento */
         .stats-banner {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            background: linear-gradient(135deg, #1e7e34, #155724);
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .stat-item h4 {
+            font-size: 36px;
+            color: #ffffff;
+            margin-bottom: 5px;
+        }
+
+        .stat-item p {
+            font-size: 14px;
+            color: #d4edda;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Rodapé */
+        footer {
+            text-align: center;
+            padding: 30px;
+            background-color: #061f0e;
+            font-size: 14px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            header { flex-direction: column; text-align: center; }
+            nav { margin-top: 15px; }
+            nav a { margin: 0 10px; }
+            .hero h2 { font-size: 30px; }
+            .stats-banner { flex-direction: column; gap: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="background-overlay"></div>
+
+    <header>
+        <h1>AGRO SUSTENTÁVEL</h1>
+        <nav>
+            <a href="#producao">Produção</a>
+            <a href="#economia">Economia</a>
+            <a href="#recursos">Consumo</a>
+            <a href="#futuro">Futuro</a>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <section class="hero">
+            <h2>O Futuro do Agronegócio Alimentando o Mundo</h2>
+            <p>Como a tecnologia, a preservação ambiental e a alta produtividade estão se unindo para criar uma agricultura de baixo carbono e economicamente viável.</p>
+        </section>
+
+        <section class="stats-banner">
+            <div class="stat-item">
+                <h4>R$ 400 Bilhões</h4>
+                <p>Financiamento Médio Anual (Plano Safra)</p>
+            </div>
+            <div class="stat-item">
+                <h4>12% a 15%</h4>
+                <p>Retorno Médio sobre o Capital Investido</p>
+            </div>
+            <div class="stat-item">
+                <h4>27%</h4>
+                <p>Contribuição Direta no PIB Nacional</p>
+            </div>
+        </section>
+
+        <div class="grid">
+            
+            <div class="card" id="producao">
+                <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&w=600&q=80" alt="Plantação de Soja" class="section-image">
+                <h3>Grandes Plantações</h3>
+                <p>A produção agrícola global baseia-se em culturas pilares como soja, milho, algodão e cana-de-açúcar. Com o uso de técnicas como o <strong>Plantio Direto</strong> e a <strong>Rotação de Culturas</strong>, o solo mantém seus nutrientes sem a necessidade de desmatar novas áreas, aumentando a produtividade por hectare.</p>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1570042225831-d98fa7577f1e?auto=format&fit=crop&w=600&q=80" alt="Pecuária Sustentável" class="section-image">
+                <h3>Pecuária Eficiente</h3>
+                <p>A produção de carne e leite evoluiu com o sistema <strong>ILPF (Integração Lavoura-Pecuária-Floresta)</strong>. Colocar gado em áreas que alternam pasto e árvores reduz a emissão de gases estufa e proporciona conforto térmico aos animais, resultando em carne de melhor qualidade e neutralidade de carbono.</p>
+            </div>
+
+            <div class="card" id="economia">
+                <img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=600&q=80" alt="Investimento em Tecnologia" class="section-image">
+                <h3>Economia e Investimento</h3>
+                <p>O agronegócio movimenta bilhões. Os maiores custos estão concentrados em fertilizantes, defensivos biológicos e sementes transgênicas de alta resistência. Em contrapartida, o faturamento gerado pelas exportações garante o superávit da balança comercial de países produtores.</p>
+            </div>
+
+        </div>
+
+        <section class="data-table-container" id="recursos">
+            <h3>Balanço de Recursos: O que se gasta e como economizar</h3>
+            <p style="margin-bottom: 20px; color: #bdc3c7;">O grande desafio do agro moderno é gerenciar insumos escassos. Veja os dados de consumo e as soluções tecnológicas aplicadas:</p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Recurso / Insumo</th>
+                        <th>Estimativa de Uso / Desafio</th>
+                        <th>Solução Sustentável Aplicada</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Água</strong></td>
+                        <td>Cerca de 70% da água doce mundial é usada na irrigação.</td>
+                        <td>Gotejamento automatizado e sensores de umidade no solo que evitam o desperdício.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Combustíveis Fósseis</strong></td>
+                        <td>Alto gasto de diesel em tratores e maquinários pesados.</td>
+                        <td>Uso de frotas movidas a biometano, biodiesel e sistemas de GPS para rotas otimizadas.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Fertilizantes</strong></td>
+                        <td>Dependência química e risco de contaminação do lençol freático.</td>
+                        <td>Bioinsumos (bactérias fixadoras de nitrogênio) e aplicação em taxa variável com drones.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Energia Elétrica</strong></td>
+                        <td>Alto custo para manter galpões, ordenhas e silos de armazenamento.</td>
+                        <td>Instalação massiva de painéis solares e usinas de biomassa nas próprias fazendas.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="card" id="futuro" style="border-left: 5px solid #3498db; background: rgba(11, 48, 25, 0.9);">
+            <h3>O Caminho para o Desmatamento Zero</h3>
+            <p>O futuro do agronegócio não depende da expansão territorial, mas sim da <strong>tecnologia aplicada no campo (AgTechs)</strong>. O monitoramento via satélite, a inteligência artificial prevendo safras e a edição genética de plantas para resistirem a secas extremas provam que é possível produzir mais alimentos utilizando menos recursos naturais. A sustentabilidade deixou de ser um custo e se tornou a maior garantia de lucro e sobrevivência para o setor.</p>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 - Agronegócio Sustentável. Dados baseados em práticas reais de agricultura de precisão.</p>
+    </footer>
+
+</body>
+</html>
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
